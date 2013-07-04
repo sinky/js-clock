@@ -16,9 +16,7 @@ function draw_clock(id, width, fillColor, strokeColor, pinColor, hourHandColor, 
 	if( minuteHandColor == null || minuteHandColor == "" ) { minuteHandColor = pinColor;}
 	if( secondHandColor == null || secondHandColor == "" ) { secondHandColor = pinColor;}
 
-	document.getElementById(id).innerHTML = '<div id="clock_mkh" Style="text-align: center; overflow: auto;"></div>'
-
-	canvas = Raphael("clock_mkh",width, width);
+	canvas = Raphael(id,width, width);
 	var clock = canvas.circle(width*.5,width*.5, width * .475);
 	clock.attr({"fill":fillColor,"stroke":strokeColor,"stroke-width":(width*.025)})
 	var minute_sign;
